@@ -1,0 +1,17 @@
+name: weblang # you probably want to 'snapcraft register <name>'
+base: core20 # the base snap is the execution environment for this snap
+version: '0.7.4' # just for humans, typically '1.2+git' or '1.3.2'
+summary: 'Go-powered new programming language for web development' # 79 char long summary
+description: 'My idea is to develop Go-powered isolated (VM) environment for web development.'
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: classic # use 'strict' once you have the right plugs and slots
+
+parts:
+  weblang:
+    source: 'https://github.com/vaclovas2020/web.git'
+    plugin: go
+
+apps:
+  weblang:
+    command: bin/main
