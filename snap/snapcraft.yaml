@@ -6,8 +6,6 @@ description: 'My idea is to develop Go-powered isolated (VM) environment for web
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-plugs:
-  - home
 
 parts:
   weblang:
@@ -17,3 +15,5 @@ parts:
 apps:
   weblang:
     command: bin/main
+    plugs:
+      - home
