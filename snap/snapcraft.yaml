@@ -14,7 +14,7 @@ parts:
 
 apps:
   weblang:
-    command: bin/main
+    command: bin/weblang
     plugs:
       - home
       - network
